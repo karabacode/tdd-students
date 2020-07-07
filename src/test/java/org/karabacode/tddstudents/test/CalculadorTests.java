@@ -30,4 +30,10 @@ public class CalculadorTests {
         int result = this.calculador.sum(10,2);
         Assert.assertEquals(12,result);
     }
+
+    @Test
+    public void subsTest(){
+        int result = this.calculador.resta(5,3);
+        Assert.assertEquals(2,result);
+    }
 }
