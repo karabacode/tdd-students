@@ -17,4 +17,11 @@ public class CalculadorTests {
         int result = calculador.sum(2,2);
         Assert.assertEquals(4,result);
     }
+
+    @Test
+    public void addDiferentesArgumentos(){
+        Calculador calculador = new Calculador();
+        int result = calculador.sum(10,2);
+        Assert.assertEquals(12,result);
+    }
 }
