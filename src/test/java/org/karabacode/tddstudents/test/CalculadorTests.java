@@ -1,6 +1,7 @@
 package org.karabacode.tddstudents.test;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.karabacode.tddstudents.Calculador;
@@ -11,17 +12,22 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class CalculadorTests {
 
+    private Calculador calculador;
+
+    @Before
+    public void setUp(){
+        this.calculador = new Calculador();
+    }
+
     @Test
     public void addTest(){
-        Calculador calculador = new Calculador();
-        int result = calculador.sum(2,2);
+        int result = this.calculador.sum(2,2);
         Assert.assertEquals(4,result);
     }
 
     @Test
     public void addDiferentesArgumentos(){
-        Calculador calculador = new Calculador();
-        int result = calculador.sum(10,2);
+        int result = this.calculador.sum(10,2);
         Assert.assertEquals(12,result);
     }
 }
